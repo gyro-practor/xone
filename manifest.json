@@ -2,7 +2,7 @@
     "name": "xone",
     "version": "1.0",
     "description": "get links",
-    "permissions": ["activeTab", "declarativeContent", "storage"],
+    "permissions": ["activeTab", "declarativeContent", "downloads", "contextMenus", "storage"],
     "background": {
       "scripts": ["backg.js"],
       "persistent": false
@@ -26,7 +26,8 @@
     "content_scripts": [
       {
         "matches": ["<all_urls>"],
-        "js": ["linklist.js"]
+        "js": [ "jquery.min.js", "linklist.js"]
+        
       }
     ],
     "manifest_version": 2
